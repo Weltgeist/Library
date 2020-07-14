@@ -23,7 +23,9 @@ class Media {
   getAverageRating(){
     return (this.ratings.reduce((acc,curr) => acc + curr, 0))/this.ratings.length;
   }
-
+  addRating(rating){
+    this.ratings.push(rating);
+  }
 
   
   
