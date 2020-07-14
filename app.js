@@ -4,31 +4,31 @@ class Media {
     this._isCheckedOut = false;
     this._ratings = [];
   }
-  get title(){
+  get title() {
     return this._title;
   }
-  get isCheckedOut(){
+  get isCheckedOut() {
     return this._isCheckedOut;
   }
-  get ratings(){
+  get ratings() {
     return this._ratings;
   }
-  set isCheckedOut(isCheckedOut){
+  set isCheckedOut(isCheckedOut) {
     this._isCheckedOut = isCheckedOut;
 
   }
-  toggleCheckOutStatus(){
+  toggleCheckOutStatus() {
     this.isCheckedOut = !this.isCheckedOut;
   }
-  getAverageRating(){
-    return (this.ratings.reduce((acc,curr) => acc + curr, 0))/this.ratings.length;
+  getAverageRating() {
+    return (this.ratings.reduce((acc, curr) => acc + curr, 0)) / this.ratings.length;
   }
-  addRating(rating){
+  addRating(rating) {
     this.ratings.push(rating);
   }
 
-  
-  
+
+
 }
 
 class Book extends Media {
@@ -37,37 +37,37 @@ class Book extends Media {
     this._author = author;
     this._pages = pages;
   }
-  get author(){
+  get author() {
     return this._author;
   }
-  get pages(){
+  get pages() {
     return this._pages;
   }
-  set author(author){
+  set author(author) {
     this._author = author;
   }
-  set pages(pages){
+  set pages(pages) {
     this._pages = pages;
   }
 
-} 
+}
 
 class Movie extends Media {
-  constructor(title, director, runtime){
+  constructor(title, director, runtime) {
     super(title);
     this._director = director;
     this._runtime = runtime;
   }
-  get director(){
+  get director() {
     return this._director;
   }
-  get runtime(){
+  get runtime() {
     return this._runtime;
   }
-  set director(director){
+  set director(director) {
     this._director = director;
   }
-  set runtime(runtime){
+  set runtime(runtime) {
     this._runtime = runtime;
   }
 
