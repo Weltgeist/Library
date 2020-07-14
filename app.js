@@ -72,3 +72,21 @@ class Movie extends Media {
   }
 
 }
+
+class CD extends Media {
+  constructor(title, artist) {
+    super(title);
+    this._artist = artist;
+    this._songs = [];
+  }
+  get artist() {
+    return this._artist;
+  }
+  set artist(artist) {
+    this._artist = artist;
+  }
+  addSong(song) {
+    this.songs.push(song);
+  }
+
+}
