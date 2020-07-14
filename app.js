@@ -17,6 +17,9 @@ class Media {
     this._isCheckedOut = isCheckedOut;
 
   }
+  toggleCheckOutStatus(){
+    this.isCheckedOut = !this.isCheckedOut;
+  }
 
 
   
